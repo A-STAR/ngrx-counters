@@ -37,9 +37,7 @@ export const counters = (state: Counter[] = COUNTERS, action: Action): Counter[]
         ];
 
       case REMOVE:
-        return [
-          ...state.slice(0, state.length - 1)
-        ];
+        return state.slice(0, state.length - 1);
 
       case RESET_ALL:
         return state
