@@ -18,17 +18,17 @@ export const counters = (state: Counter[] = COUNTERS, action: Action): Counter[]
       case INCREMENT:
         return state
           .map(counter => counter.id === action.payload.id ?
-            Object.assign({}, counter, { count: ++counter.count }) : counter);
+            Object.assign({ }, counter, { count: ++counter.count }) : counter);
 
       case DECREMENT:
         return state
           .map(counter => counter.id === action.payload.id && counter.count ?
-            Object.assign({}, counter, { count: --counter.count }) : counter);
+            Object.assign({ }, counter, { count: --counter.count }) : counter);
 
       case RESET:
         return state
           .map(counter => counter.id === action.payload.id ?
-            Object.assign({}, counter, { count: 0 }) : counter);
+            Object.assign({ }, counter, { count: 0 }) : counter);
 
       case ADD:
         return [
@@ -42,7 +42,7 @@ export const counters = (state: Counter[] = COUNTERS, action: Action): Counter[]
 
       case RESET_ALL:
         return state
-          .map(counter => Object.assign({}, counter, { count: 0 }));
+          .map(counter => Object.assign({ }, counter, { count: 0 }));
 
       default:
         return state;
