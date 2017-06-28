@@ -1,0 +1,13 @@
+<div class="reset-all">
+  <button (click)="onResetAll()">Reset All</button>
+  <button (click)="onRemove()">-</button>
+  <button (click)="onAdd()">+</button>
+</div>
+
+<counter
+  *ngFor="let counter of counters$ | async"
+  [counter]="counter"
+  (increment)="onIncrement($event)"
+  (decrement)="onDecrement($event)"
+  (reset)="onReset($event)">
+</counter>
