@@ -1,10 +1,10 @@
-import { CounterPage } from './app.po';
+import { CountersPage } from './app.po';
 
 describe('counter App', function() {
-  let page: CounterPage;
+  let page: CountersPage;
 
   beforeEach(() => {
-    page = new CounterPage();
+    page = new CountersPage();
   });
 
   it('should display message saying app works', () => {

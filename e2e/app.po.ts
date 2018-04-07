@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class CounterPage {
+export class CountersPage {
   navigateTo() {
     return browser.get('/');
   }
